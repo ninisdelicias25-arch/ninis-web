@@ -20,36 +20,28 @@
         background: linear-gradient(135deg, #ffe3cf, #ffe8d8); /* color más tenue */
         padding: 50px 20px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* centramos horizontalmente todo */
     }
+
     header .logo {
-        display: block;
-        margin: 0 auto 10px; /* separación inferior del logo con el texto */
-        max-width: 400px;    /* logo más grande */
+        max-width: 400px;    
+        width: 100%;
         height: auto;
+        margin-bottom: 20px; /* separación con el texto */
     }
+
     header p {
-        margin-top: 10px;          
-        font-size: 2em;             /* tamaño más grande */
-        font-family: 'Dancing Script', cursive; /* igual que títulos */
-        font-style: italic;         /* cursiva */
+        font-size: 2em;             
+        font-family: 'Dancing Script', cursive; 
+        font-style: italic;         
         color: #8e4a1e;
+        line-height: 1.2em;         
+        text-align: center;
         animation: fadeInUp 1s ease forwards;
     }
-header p {
-    margin-top: 10px;          
-    font-size: 2em;             
-    font-family: 'Dancing Script', cursive; 
-    font-style: italic;         
-    color: #8e4a1e;
-    text-align: center;
-    line-height: 1.2em;         
-    animation: fadeInUp 1s ease forwards;
-}
 
-header p .ninis-text {
-    font-size: 2.5em;   /* más grande que el resto del texto */
-    font-weight: bold;   /* opcional, si querés más énfasis */
-}
     @keyframes fadeInDown { from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);} }
     @keyframes fadeInUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
 
@@ -109,10 +101,7 @@ header p .ninis-text {
 
 <header>
     <img src="images/logopng2.png" alt="Nini's Logo" class="logo">
-    <p>
-
-        Horneamos Momentos 🥐
-    </p>
+    <p>Horneamos Momentos 🥐</p>
 </header>
 
 <section>
@@ -152,6 +141,7 @@ header p .ninis-text {
                 <img src="images/Pan de semillas.jpg" alt="Pan de Semillas">
                 <h3>Pan de Semillas 🥖 </h3>
                 <p>¡Acompañalo con lo que quieras!</p>
+            </div>
         </div>
     </div>
 </section>
@@ -187,6 +177,3 @@ header p .ninis-text {
 
 </body>
 </html>
-
-
-
