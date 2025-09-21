@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nini's – Horneamos con amor</title>
+
+<!-- Fuentes -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto&display=swap" rel="stylesheet">
+
+<!-- Font Awesome para íconos oficiales -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Roboto', sans-serif; background: #fff8f0; color: #333; line-height:1.6; opacity:0; transition: opacity 1s ease-in; }
+
+    /* Header */
+    header {
+        background: linear-gradient(135deg, #ffe3cf, #ffe8d8); /* color más tenue */
+        padding: 50px 20px;
+        text-align: center;
+    }
+    header .logo {
+        display: block;
+        margin: 0 auto 10px; /* separación inferior del logo con el texto */
+        max-width: 400px;    /* logo más grande */
+        height: auto;
+    }
+    header p {
+        margin-top: 10px;          
+        font-size: 2em;             /* tamaño más grande */
+        font-family: 'Dancing Script', cursive; /* igual que títulos */
+        font-style: italic;         /* cursiva */
+        color: #8e4a1e;
+        animation: fadeInUp 1s ease forwards;
+    }
+header p {
+    margin-top: 10px;          
+    font-size: 2em;             
+    font-family: 'Dancing Script', cursive; 
+    font-style: italic;         
+    color: #8e4a1e;
+    text-align: center;
+    line-height: 1.2em;         
+    animation: fadeInUp 1s ease forwards;
+}
+
+header p .ninis-text {
+    font-size: 2.5em;   /* más grande que el resto del texto */
+    font-weight: bold;   /* opcional, si querés más énfasis */
+}
+    @keyframes fadeInDown { from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes fadeInUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+
+    section { padding: 60px 20px; max-width:1000px; margin:auto; }
+    section h2 {
+        font-family: 'Dancing Script', cursive;
+        font-size:2.5em;
+        color:#d35400;
+        text-align:center;
+        margin-bottom:25px;
+        animation: fadeIn 1.2s ease forwards;
+    }
+
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+    /* Slider de Productos */
+    .slider { position: relative; overflow: hidden; border-radius:25px; max-width: 1000px; margin:auto; }
+    .slide-track { display: flex; transition: transform 0.5s ease; }
+    .producto {
+        min-width: 300px;
+        margin: 0 10px;
+        background: #fff1e6;
+        border-radius:25px;
+        padding:20px;
+        text-align:center;
+        transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .producto:hover { transform: translateY(-12px) scale(1.03); box-shadow: 0 15px 25px rgba(0,0,0,0.2); }
+    .producto img { max-width:100%; border-radius:20px; margin-bottom:15px; transition: transform 0.3s; }
+    .producto img:hover { transform: scale(1.05); }
+
+    .botones {
+        display:flex; gap:25px; justify-content:center; flex-wrap:wrap; margin-top:35px;
+    }
+    .boton {
+        text-decoration:none;
+        padding:15px 35px;
+        border-radius:35px;
+        font-weight:bold;
+        color:#fff;
+        background: linear-gradient(135deg, #d35400, #e67e22);
+        transition: background 0.4s, transform 0.3s;
+    }
+    .boton:hover { background: linear-gradient(135deg, #e67e22, #d35400); transform: scale(1.05); }
+
+    footer { text-align:center; padding:35px 20px; background: linear-gradient(135deg, #ffc9a3, #ffd8b1); font-size:0.95em; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        section h2 { font-size:2em; }
+        header p { font-size:1.5em; } /* más legible en móvil */
+        .producto { min-width: 250px; }
+    }
+</style>
+</head>
+<body onload="document.body.style.opacity='1'">
+
+<header>
+    <img src="images/logopng2.png" alt="Nini's Logo" class="logo">
+    <p>
+
+        Horneamos Momentos 🥐
+    </p>
+</header>
+
+<section>
+    <h2>Sobre Nosotros</h2>
+    <p style="max-width:800px; margin:auto; text-align:center; font-size:1.1em;">
+        Somos un emprendimiento familiar creando sabores únicos con amor y dedicación.
+        Cada receta nace de nuestra pasión por la gastronomía y el deseo de compartir momentos deliciosos contigo.
+        En Nini's, no solo cocinamos, <strong>horneamos recuerdos</strong> 💛.
+    </p>
+</section>
+
+<section>
+    <h2>Nuestros Productos</h2>
+    <div class="slider">
+        <div class="slide-track" id="slideTrack">
+            <div class="producto">
+                <img src="images/budin.jpg" alt="Budín Casero">
+                <h3>Budín Casero 🧁</h3>
+                <p>¡Recién horneado, lleno de sabor!</p>
+            </div>
+            <div class="producto">
+                <img src="images/manzana.jpg" alt="Torta de Manzana">
+                <h3>Torta de manzana 🍰</h3>
+                <p>Torta casera de manzanas dulces, un manjar.</p>
+            </div>
+            <div class="producto">
+                <img src="images/arandanos.jpg" alt="Torta de Arandanos">
+                <h3>Torta de Arandanos 🍰 </h3>
+                <p>Delicia que alegra cualquier día</p>
+            </div>
+            <div class="producto">
+                <img src="images/Pan dulce.jpg" alt="Pan Dulce">
+                <h3>Pan Dulce 🧁</h3>
+                <p>Delicioso, ¡reservá ya el tuyo!.</p>
+            </div>
+            <div class="producto">
+                <img src="images/Pan de semillas.jpg" alt="Pan de Semillas">
+                <h3>Pan de Semillas 🥖 </h3>
+                <p>¡Acompañalo con lo que quieras!</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Contacto</h2>
+    <p style="text-align:center; font-size:1.1em;">Escribinos o seguinos en nuestras redes:</p>
+    <div class="botones">
+        <a class="boton" href="https://www.instagram.com/ninisdelicias_/" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a class="boton" href="https://wa.me/549XXXXXXXXX" target="_blank" style="background-color:#25D366; background-image:none;">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Nini's – Horneamos Momentos 💛</p>
+</footer>
+
+<script>
+    // Slider automático
+    const track = document.getElementById('slideTrack');
+    let index = 0;
+    const slides = track.children;
+    const total = slides.length;
+    setInterval(() => {
+        index = (index + 1) % total;
+        track.style.transform = `translateX(-${index * 320}px)`;
+    }, 3000);
+</script>
+
+</body>
+</html>
+
+
+
