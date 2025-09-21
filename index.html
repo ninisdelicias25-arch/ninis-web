@@ -8,7 +8,7 @@
 <!-- Fuentes -->
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto&display=swap" rel="stylesheet">
 
-<!-- Font Awesome para íconos oficiales -->
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -17,28 +17,25 @@
 
     /* Header */
     header {
-        background: linear-gradient(135deg, #ffe3cf, #ffe8d8); /* color más tenue */
+        background-color: #ffe3cf; /* color base idéntico */
+        background-image: linear-gradient(135deg, #ffe3cf, #ffe8d8); /* mismo gradiente */
         padding: 50px 20px;
         text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* centramos horizontalmente todo */
     }
-
     header .logo {
-        max-width: 400px;    
-        width: 100%;
+        display: block;
+        margin: 0 auto 10px;
+        max-width: 400px; 
         height: auto;
-        margin-bottom: 20px; /* separación con el texto */
     }
-
     header p {
-        font-size: 2em;             
-        font-family: 'Dancing Script', cursive; 
-        font-style: italic;         
+        margin-top: 10px;          
+        font-size: 2em;
+        font-family: 'Dancing Script', cursive;
+        font-style: italic;
         color: #8e4a1e;
-        line-height: 1.2em;         
         text-align: center;
+        line-height: 1.2em;
         animation: fadeInUp 1s ease forwards;
     }
 
@@ -54,7 +51,6 @@
         margin-bottom:25px;
         animation: fadeIn 1.2s ease forwards;
     }
-
     @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
 
     /* Slider de Productos */
@@ -92,7 +88,7 @@
     /* Responsive */
     @media (max-width: 600px) {
         section h2 { font-size:2em; }
-        header p { font-size:1.5em; } /* más legible en móvil */
+        header p { font-size:1.5em; } /* tamaño legible en móvil */
         .producto { min-width: 250px; }
     }
 </style>
@@ -129,7 +125,7 @@
             </div>
             <div class="producto">
                 <img src="images/arandanos.jpg" alt="Torta de Arandanos">
-                <h3>Torta de Arandanos 🍰 </h3>
+                <h3>Torta de Arandanos 🍰</h3>
                 <p>Delicia que alegra cualquier día</p>
             </div>
             <div class="producto">
@@ -139,7 +135,7 @@
             </div>
             <div class="producto">
                 <img src="images/Pan de semillas.jpg" alt="Pan de Semillas">
-                <h3>Pan de Semillas 🥖 </h3>
+                <h3>Pan de Semillas 🥖</h3>
                 <p>¡Acompañalo con lo que quieras!</p>
             </div>
         </div>
