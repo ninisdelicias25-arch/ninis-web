@@ -113,6 +113,26 @@
         transform: scale(1.05);
     }
 
+    /* Sección de "Próximamente" */
+    .proximamente {
+        text-align: center;
+        background: linear-gradient(135deg, #ffe8d8, #fff1e6);
+        border-radius: 20px;
+        padding: 40px 20px;
+        margin-top: 40px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        animation: fadeInUp 1s ease forwards;
+    }
+    .proximamente h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+    .proximamente p {
+        font-size: 1.2em;
+        color: #8e4a1e;
+    }
+
+    /* Botones */
     .botones {
         display:flex; gap:25px; justify-content:center; flex-wrap:wrap; margin-top:35px;
     }
@@ -133,6 +153,8 @@
     @media (max-width: 600px) {
         section h2 { font-size:2em; }
         header p { font-size:1.5em; }
+        .proximamente h2 { font-size:1.8em; }
+        .proximamente p { font-size:1em; }
     }
 </style>
 </head>
@@ -158,39 +180,46 @@
         <div class="producto">
             <img src="images/budin.jpg" alt="Budín Casero">
             <h3>Budín Casero 🧁</h3>
-            <p class="precio">$2500</p>
+            <p class="precio">$ Consultar</p>
             <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20un%20Budín%20Casero" target="_blank" class="btn-pedir">Pedir ahora</a>
         </div>
         <div class="producto">
             <img src="images/manzana.jpg" alt="Torta de Manzana">
             <h3>Torta de Manzana 🍰</h3>
-            <p class="precio">$4000</p>
+            <p class="precio">$ Consultar</p>
             <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20una%20Torta%20de%20Manzana" target="_blank" class="btn-pedir">Pedir ahora</a>
         </div>
         <div class="producto">
             <img src="images/arandanos.jpg" alt="Torta de Arándanos">
             <h3>Torta de Arándanos 🍰</h3>
-            <p class="precio">$4200</p>
+            <p class="precio">$ Consultar</p>
             <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20una%20Torta%20de%20Arandanos" target="_blank" class="btn-pedir">Pedir ahora</a>
         </div>
         <div class="producto">
             <img src="images/Pan dulce.jpg" alt="Pan Dulce">
             <h3>Pan Dulce 🧁</h3>
-            <p class="precio">$5500</p>
+            <p class="precio">$ Consultar</p>
             <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20un%20Pan%20Dulce" target="_blank" class="btn-pedir">Pedir ahora</a>
         </div>
         <div class="producto">
             <img src="images/Pan de semillas.jpg" alt="Pan de Semillas">
             <h3>Pan de Semillas 🥖</h3>
-            <p class="precio">$3000</p>
+            <p class="precio">$ Consultar</p>
             <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20un%20Pan%20de%20Semillas" target="_blank" class="btn-pedir">Pedir ahora</a>
         </div>
         <div class="producto">
             <img src="images/Budin de Chocolate.jpg" alt="Budín con Chips">
             <h3>Budín con Chips 🍫</h3>
-            <p class="precio">$2800</p>
+            <p class="precio">$ Consultar</p>
             <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20un%20Budin%20con%20Chips" target="_blank" class="btn-pedir">Pedir ahora</a>
         </div>
+    </div>
+
+    <!-- Aviso de nuevos productos -->
+    <div class="proximamente">
+        <h2>✨ ¡Muy pronto más delicias! ✨</h2>
+        <p>Estamos preparando nuevas sorpresas dulces 🍪🍩.  
+        ¡Seguí nuestras redes para enterarte primero!</p>
     </div>
 </section>
 
