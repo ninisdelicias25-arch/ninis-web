@@ -44,18 +44,9 @@
       animation: fadeInUp 1s ease forwards;
     }
 
-    @keyframes fadeInDown {
-      from {opacity:0; transform:translateY(-20px);}
-      to {opacity:1; transform:translateY(0);}
-    }
-    @keyframes fadeInUp {
-      from {opacity:0; transform:translateY(20px);}
-      to {opacity:1; transform:translateY(0);}
-    }
-    @keyframes fadeIn {
-      from {opacity:0;}
-      to {opacity:1;}
-    }
+    @keyframes fadeInDown { from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes fadeInUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
 
     section {
       padding: 60px 20px;
@@ -134,29 +125,28 @@
       box-shadow: 0 8px 16px rgba(0,0,0,0.1);
       animation: fadeInUp 1s ease forwards;
     }
-    .proximamente h2 {
-      font-size: 2em;
-      margin-bottom: 15px;
-    }
-    .proximamente p {
-      font-size: 1.2em;
-      color: #8e4a1e;
-    }
+    .proximamente h2 { font-size: 2em; margin-bottom: 15px; }
+    .proximamente p { font-size: 1.2em; color: #8e4a1e; }
 
-    /* Sección de Promociones */
+    /* Sección de Promociones con impacto visual */
     .promociones {
-      background: linear-gradient(135deg, #fff1e6, #ffe8d8);
+      background: linear-gradient(135deg, #ffe0c2, #ffc299);
       border-radius: 20px;
       padding: 50px 20px;
       margin: 50px auto;
       max-width: 1000px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      box-shadow: 0 0 20px rgba(211, 84, 0, 0.4), 0 8px 16px rgba(0,0,0,0.1);
       text-align: center;
       animation: fadeInUp 1s ease forwards;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .promociones:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(211, 84, 0, 0.5);
     }
     .promociones h2 {
       font-family: 'Dancing Script', cursive;
-      font-size: 2.3em;
+      font-size: 2.5em;
       margin-bottom: 30px;
       color: #d35400;
     }
@@ -166,11 +156,6 @@
       align-items: center;
       justify-content: center;
       gap: 25px;
-    }
-    .promo-img {
-      max-width: 180px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
     .promo-texto {
       max-width: 600px;
@@ -223,16 +208,18 @@
       .proximamente h2 { font-size:1.8em; }
       .proximamente p { font-size:1em; }
     }
+
   </style>
 </head>
 <body onload="document.body.style.opacity='1'">
 
-  <!-- Header original intacto -->
+  <!-- Header -->
   <header>
     <img src="images/Logo Original PNG.png" alt="Nini's Logo" class="logo">
     <p>Horneamos Momentos 🥐</p>
   </header>
 
+  <!-- Sobre Nosotros -->
   <section>
     <h2>Sobre Nosotros</h2>
     <p style="max-width:800px; margin:auto; text-align:center; font-size:1.1em;">
@@ -242,10 +229,10 @@
     </p>
   </section>
 
+  <!-- Catálogo -->
   <section>
     <h2>Nuestros Productos</h2>
     <div class="catalogo">
-      <!-- Productos -->
       <div class="producto">
         <img src="images/budin.jpg" alt="Budín Casero">
         <h3>Budín inglés 🧁</h3>
@@ -314,29 +301,26 @@
       </div>
     </div>
 
-    <!-- Aviso de nuevos productos -->
+    <!-- Próximamente -->
     <div class="proximamente">
       <h2>✨ ¡Muy pronto más delicias! ✨</h2>
       <p>Estamos preparando nuevas sorpresas dulces 🍪🍩. ¡Seguí nuestras redes para enterarte primero!</p>
     </div>
   </section>
 
-  <!-- Nueva sección Promociones -->
+  <!-- Promociones -->
   <section class="promociones">
-    <h2>🎁 Promociones Especiales</h2>
+    <h2>🎁 Promociones Especiales 💐</h2>
     <div class="promo-contenido">
       <div class="promo-texto">
         <h3>Descuentos por el Día de la Madre 💐</h3>
-        <p>Este mes, sorprendé a mamá con nuestras delicias caseras y aprovechá
-          <strong>promociones exclusivas</strong>.  
-          ¡Consultá por combos especiales con descuentos imperdibles!
-        </p>
-        <a href="https://wa.me/5491158397487?text=Quiero%20info%20sobre%20las%20promos%20del%20Día%20de%20la%20Madre"
-           target="_blank" class="btn-pedir">Consultar Promo</a>
+        <p>Este mes, sorprendé a mamá con nuestras delicias caseras y aprovechá <strong>promociones exclusivas</strong>. ¡Consultá por combos especiales con descuentos imperdibles! </p>
+        <a href="https://wa.me/5491158397487?text=Quiero%20info%20sobre%20las%20promos%20del%20Día%20de%20la%20Madre" target="_blank" class="btn-pedir">Consultar Promo</a>
       </div>
     </div>
   </section>
 
+  <!-- Contacto -->
   <section>
     <h2>Contacto</h2>
     <p style="text-align:center; font-size:1.1em;">Escribinos o seguinos en nuestras redes:</p>
@@ -344,15 +328,17 @@
       <a class="boton" href="https://www.instagram.com/_ninis_ok/" target="_blank">
         <i class="fab fa-instagram"></i> Instagram
       </a>
-      <a class="boton" href="https://wa.me/5491158397487" target="_blank"
-         style="background-color:#25D366; background-image:none;">
+      <a class="boton" href="https://wa.me/5491158397487" target="_blank" style="background-color:#25D366; background-image:none;">
         <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Nini's – Horneamos Momentos 💛</p>
   </footer>
+
 </body>
 </html>
+
