@@ -1,244 +1,358 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nini's – Horneamos con amor</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nini's – Horneamos con amor</title>
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- Fuentes -->
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto&display=swap" rel="stylesheet">
-
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
+  <style>
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Roboto', sans-serif; background: #fff8f0; color: #333; line-height:1.6; opacity:0; transition: opacity 1s ease-in; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #fff8f0;
+      color: #333;
+      line-height:1.6;
+      opacity:0;
+      transition: opacity 1s ease-in;
+    }
 
     /* Header */
     header {
-        background-color: #ffe3cf;
-        background-image: linear-gradient(135deg, #ffe3cf, #ffe8d8);
-        padding: 50px 20px;
-        text-align: center;
+      background-color: #ffe3cf;
+      background-image: linear-gradient(135deg, #ffe3cf, #ffe8d8);
+      padding: 50px 20px;
+      text-align: center;
     }
     header .logo {
-        display: block;
-        margin: 0 auto 10px;
-        max-width: 400px; 
-        height: auto;
+      display: block;
+      margin: 0 auto 10px;
+      max-width: 400px;
+      height: auto;
     }
     header p {
-        margin-top: 10px;          
-        font-size: 2em;
-        font-family: 'Dancing Script', cursive;
-        font-style: italic;
-        color: #8e4a1e;
-        text-align: center;
-        line-height: 1.2em;
-        animation: fadeInUp 1s ease forwards;
+      margin-top: 10px;
+      font-size: 2em;
+      font-family: 'Dancing Script', cursive;
+      font-style: italic;
+      color: #8e4a1e;
+      text-align: center;
+      line-height: 1.2em;
+      animation: fadeInUp 1s ease forwards;
     }
 
-    @keyframes fadeInDown { from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);} }
-    @keyframes fadeInUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes fadeInDown {
+      from {opacity:0; transform:translateY(-20px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+    @keyframes fadeInUp {
+      from {opacity:0; transform:translateY(20px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+    @keyframes fadeIn {
+      from {opacity:0;}
+      to {opacity:1;}
+    }
 
-    section { padding: 60px 20px; max-width:1000px; margin:auto; }
+    section {
+      padding: 60px 20px;
+      max-width:1000px;
+      margin:auto;
+    }
     section h2 {
-        font-family: 'Dancing Script', cursive;
-        font-size:2.5em;
-        color:#d35400;
-        text-align:center;
-        margin-bottom:25px;
-        animation: fadeIn 1.2s ease forwards;
+      font-family: 'Dancing Script', cursive;
+      font-size:2.5em;
+      color:#d35400;
+      text-align:center;
+      margin-bottom:25px;
+      animation: fadeIn 1.2s ease forwards;
     }
-    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
 
     /* Catálogo en grilla */
     .catalogo {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-        padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 20px;
     }
-
     .producto {
-        background: #fff1e6;
-        border-radius: 20px;
-        padding: 20px;
-        text-align: center;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
+      background: #fff1e6;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-
     .producto:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.2);
     }
-
     .producto img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 15px;
-        margin-bottom: 15px;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 15px;
     }
-
     .producto h3 {
-        margin: 10px 0;
-        font-size: 1.2em;
-        color: #8e4a1e;
+      margin: 10px 0;
+      font-size: 1.2em;
+      color: #8e4a1e;
     }
-
     .precio {
-        font-weight: bold;
-        font-size: 1.1em;
-        color: #d35400;
-        margin: 10px 0;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #d35400;
+      margin: 10px 0;
     }
-
     .btn-pedir {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 20px;
-        border-radius: 25px;
-        background: linear-gradient(135deg, #d35400, #e67e22);
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background 0.3s, transform 0.2s;
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #d35400, #e67e22);
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
     }
-
     .btn-pedir:hover {
-        background: linear-gradient(135deg, #e67e22, #d35400);
-        transform: scale(1.05);
+      background: linear-gradient(135deg, #e67e22, #d35400);
+      transform: scale(1.05);
     }
 
     /* Sección de "Próximamente" */
     .proximamente {
-        text-align: center;
-        background: linear-gradient(135deg, #ffe8d8, #fff1e6);
-        border-radius: 20px;
-        padding: 40px 20px;
-        margin-top: 40px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        animation: fadeInUp 1s ease forwards;
+      text-align: center;
+      background: linear-gradient(135deg, #ffe8d8, #fff1e6);
+      border-radius: 20px;
+      padding: 40px 20px;
+      margin-top: 40px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease forwards;
     }
     .proximamente h2 {
-        font-size: 2em;
-        margin-bottom: 15px;
+      font-size: 2em;
+      margin-bottom: 15px;
     }
     .proximamente p {
-        font-size: 1.2em;
-        color: #8e4a1e;
+      font-size: 1.2em;
+      color: #8e4a1e;
+    }
+
+    /* Sección de Promociones */
+    .promociones {
+      background: linear-gradient(135deg, #fff1e6, #ffe8d8);
+      border-radius: 20px;
+      padding: 50px 20px;
+      margin: 50px auto;
+      max-width: 1000px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: fadeInUp 1s ease forwards;
+    }
+    .promociones h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.3em;
+      margin-bottom: 30px;
+      color: #d35400;
+    }
+    .promo-contenido {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+    }
+    .promo-img {
+      max-width: 180px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .promo-texto {
+      max-width: 600px;
+      text-align: left;
+      font-size: 1.1em;
+      color: #8e4a1e;
+    }
+    .promo-texto h3 {
+      margin-bottom: 10px;
+      color: #d35400;
+    }
+    @media (max-width: 700px) {
+      .promo-contenido { flex-direction: column; text-align: center; }
+      .promo-texto { text-align: center; }
     }
 
     /* Botones */
     .botones {
-        display:flex; gap:25px; justify-content:center; flex-wrap:wrap; margin-top:35px;
+      display:flex;
+      gap:25px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:35px;
     }
     .boton {
-        text-decoration:none;
-        padding:15px 35px;
-        border-radius:35px;
-        font-weight:bold;
-        color:#fff;
-        background: linear-gradient(135deg, #d35400, #e67e22);
-        transition: background 0.4s, transform 0.3s;
+      text-decoration:none;
+      padding:15px 35px;
+      border-radius:35px;
+      font-weight:bold;
+      color:#fff;
+      background: linear-gradient(135deg, #d35400, #e67e22);
+      transition: background 0.4s, transform 0.3s;
     }
-    .boton:hover { background: linear-gradient(135deg, #e67e22, #d35400); transform: scale(1.05); }
+    .boton:hover {
+      background: linear-gradient(135deg, #e67e22, #d35400);
+      transform: scale(1.05);
+    }
 
-    footer { text-align:center; padding:35px 20px; background: linear-gradient(135deg, #ffc9a3, #ffd8b1); font-size:0.95em; }
+    footer {
+      text-align:center;
+      padding:35px 20px;
+      background: linear-gradient(135deg, #ffc9a3, #ffd8b1);
+      font-size:0.95em;
+    }
 
     /* Responsive */
     @media (max-width: 600px) {
-        section h2 { font-size:2em; }
-        header p { font-size:1.5em; }
-        .proximamente h2 { font-size:1.8em; }
-        .proximamente p { font-size:1em; }
+      section h2 { font-size:2em; }
+      header p { font-size:1.5em; }
+      .proximamente h2 { font-size:1.8em; }
+      .proximamente p { font-size:1em; }
     }
-</style>
+  </style>
 </head>
 <body onload="document.body.style.opacity='1'">
 
-<header>
+  <!-- Header original intacto -->
+  <header>
     <img src="images/Logo Original PNG.png" alt="Nini's Logo" class="logo">
     <p>Horneamos Momentos 🥐</p>
-</header>
+  </header>
 
-<section>
+  <section>
     <h2>Sobre Nosotros</h2>
     <p style="max-width:800px; margin:auto; text-align:center; font-size:1.1em;">
-        Somos un emprendimiento familiar creando sabores únicos con amor y dedicación.
-        Cada receta nace de nuestra pasión por la gastronomía y el deseo de compartir momentos deliciosos contigo.
-        En Nini's, no solo cocinamos, <strong>horneamos momentos</strong> 💛.
+      Somos un emprendimiento familiar creando sabores únicos con amor y dedicación.
+      Cada receta nace de nuestra pasión por la gastronomía y el deseo de compartir momentos deliciosos contigo.
+      En Nini's, no solo cocinamos, <strong>horneamos momentos</strong> 💛.
     </p>
-</section>
+  </section>
 
-<section>
+  <section>
     <h2>Nuestros Productos</h2>
     <div class="catalogo">
-        <div class="producto">
-            <img src="images/budin.jpg" alt="Budín Casero">
-            <h3>Budín Casero 🧁</h3>
-            <p class="precio">$ Consultar</p>
-            <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20un%20Budín%20Casero" target="_blank" class="btn-pedir">Pedir ahora</a>
-        </div>
-        <div class="producto">
-            <img src="images/manzana.jpg" alt="Torta de Manzana">
-            <h3>Torta de Manzana 🍰</h3>
-            <p class="precio">$ Consultar</p>
-            <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20una%20Torta%20de%20Manzana" target="_blank" class="btn-pedir">Pedir ahora</a>
-        </div>
-        <div class="producto">
-            <img src="images/arandanos.jpg" alt="Torta de Arándanos">
-            <h3>Torta de Arándanos 🍰</h3>
-            <p class="precio">$ Consultar</p>
-            <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20una%20Torta%20de%20Arandanos" target="_blank" class="btn-pedir">Pedir ahora</a>
-        </div>
-        <div class="producto">
-            <img src="images/Pan dulce.jpg" alt="Pan Dulce">
-            <h3>Pan Dulce 🧁</h3>
-            <p class="precio">$ Consultar</p>
-            <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20un%20Pan%20Dulce" target="_blank" class="btn-pedir">Pedir ahora</a>
-        </div>
-        <div class="producto">
-            <img src="images/Pan de semillas.jpg" alt="Pan de Semillas">
-            <h3>Pan de Semillas 🥖</h3>
-            <p class="precio">$ Consultar</p>
-            <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20un%20Pan%20de%20Semillas" target="_blank" class="btn-pedir">Pedir ahora</a>
-        </div>
-        <div class="producto">
-            <img src="images/Budin de Chocolate.jpg" alt="Budín con Chips">
-            <h3>Budín con Chips 🍫</h3>
-            <p class="precio">$ Consultar</p>
-            <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20un%20Budin%20con%20Chips" target="_blank" class="btn-pedir">Pedir ahora</a>
-        </div>
+      <!-- Productos -->
+      <div class="producto">
+        <img src="images/budin.jpg" alt="Budín Casero">
+        <h3>Budín inglés 🧁</h3>
+        <p class="precio">$ Consultar</p>
+        <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20un%20Budín%20Casero" target="_blank" class="btn-pedir">Pedir ahora</a>
+      </div>
+      <div class="producto">
+        <img src="images/manzana.jpg" alt="Torta de Manzana">
+        <h3>Torta de Manzana 🍰</h3>
+        <p class="precio">$ Consultar</p>
+        <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20una%20Torta%20de%20Manzana" target="_blank" class="btn-pedir">Pedir ahora</a>
+      </div>
+      <div class="producto">
+        <img src="images/arandanos.jpg" alt="Torta de Arándanos">
+        <h3>Torta de Arándanos 🍰</h3>
+        <p class="precio">$ Consultar</p>
+        <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20una%20Torta%20de%20Arandanos" target="_blank" class="btn-pedir">Pedir ahora</a>
+      </div>
+      <div class="producto">
+        <img src="images/Pan dulce.jpg" alt="Pan Dulce">
+        <h3>Pan Dulce 🧁</h3>
+        <p class="precio">$ Consultar</p>
+        <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20un%20Pan%20Dulce" target="_blank" class="btn-pedir">Pedir ahora</a>
+      </div>
+      <div class="producto">
+        <img src="images/Pan de semillas.jpg" alt="Pan de Semillas">
+        <h3>Pan de Semillas 🥖</h3>
+        <p class="precio">$ Consultar</p>
+        <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20un%20Pan%20de%20Semillas" target="_blank" class="btn-pedir">Pedir ahora</a>
+      </div>
+      <div class="producto">
+        <img src="images/Budin de Chocolate.jpg" alt="Budín con Chips">
+        <h3>Budín con Chips 🍫</h3>
+        <p class="precio">$ Consultar</p>
+        <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20un%20Budin%20con%20Chips" target="_blank" class="btn-pedir">Pedir ahora</a>
+      </div>
+      <div class="producto">
+        <img src="images/budin-integral-de-semillas.jpg" alt="Budin Integral De Semillas">
+        <h3>Budín Integral de Semillas 🧁 </h3>
+        <p class="precio">$ Consultar</p>
+        <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20un%20Budín%20integral%20de%20Semillas" target="_blank" class="btn-pedir">Pedir ahora</a>
+      </div>
+      <div class="producto">
+        <img src="images/figacitas.jpg" alt="Figacitas">
+        <h3>Figacitas (1/2 o 1kg) 🥖</h3>
+        <p class="precio">$ Consultar</p>
+        <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20figacitas" target="_blank" class="btn-pedir">Pedir ahora</a>
+      </div>
+      <div class="producto">
+        <img src="images/prepizzacebolla.jpg" alt="Prepizza Cebolla">
+        <h3>Prepizza de Cebolla</h3>
+        <p class="precio">$ Consultar</p>
+        <a href="https://wa.me/5491158397487?text=Quisiera%20encargar%20prepizzas" target="_blank" class="btn-pedir">Pedir ahora</a>
+      </div>
+      <div class="producto">
+        <img src="images/prepizzatomate.jpg" alt="Prepizza Tomate">
+        <h3>Prepizza de Tomate</h3>
+        <p class="precio">$ Consultar</p>
+        <a href="https://wa.me/5491158397487?text=Quisiera%20encargar%20prepizzas" target="_blank" class="btn-pedir">Pedir ahora</a>
+      </div>
+      <div class="producto">
+        <img src="images/lemonpiegrande.jpg" alt="Lemon Pie">
+        <h3>Lemon Pie</h3>
+        <p class="precio">$ Consultar</p>
+        <a href="https://wa.me/5491158397487?text=Quiero%20pedir%20un%20Lemon%20Pie" target="_blank" class="btn-pedir">Pedir ahora</a>
+      </div>
     </div>
 
     <!-- Aviso de nuevos productos -->
     <div class="proximamente">
-        <h2>✨ ¡Muy pronto más delicias! ✨</h2>
-        <p>Estamos preparando nuevas sorpresas dulces 🍪🍩.  
-        ¡Seguí nuestras redes para enterarte primero!</p>
+      <h2>✨ ¡Muy pronto más delicias! ✨</h2>
+      <p>Estamos preparando nuevas sorpresas dulces 🍪🍩. ¡Seguí nuestras redes para enterarte primero!</p>
     </div>
-</section>
+  </section>
 
-<section>
+  <!-- Nueva sección Promociones -->
+  <section class="promociones">
+    <h2>🎁 Promociones Especiales</h2>
+    <div class="promo-contenido">
+      <div class="promo-texto">
+        <h3>Descuentos por el Día de la Madre 💐</h3>
+        <p>Este mes, sorprendé a mamá con nuestras delicias caseras y aprovechá
+          <strong>promociones exclusivas</strong>.  
+          ¡Consultá por combos especiales con descuentos imperdibles!
+        </p>
+        <a href="https://wa.me/5491158397487?text=Quiero%20info%20sobre%20las%20promos%20del%20Día%20de%20la%20Madre"
+           target="_blank" class="btn-pedir">Consultar Promo</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <h2>Contacto</h2>
     <p style="text-align:center; font-size:1.1em;">Escribinos o seguinos en nuestras redes:</p>
     <div class="botones">
-        <a class="boton" href="https://www.instagram.com/_ninis_ok/" target="_blank">
-            <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <a class="boton" href="https://wa.me/5491158397487" target="_blank" style="background-color:#25D366; background-image:none;">
-            <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
+      <a class="boton" href="https://www.instagram.com/_ninis_ok/" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a class="boton" href="https://wa.me/5491158397487" target="_blank"
+         style="background-color:#25D366; background-image:none;">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
     </div>
-</section>
+  </section>
 
-<footer>
+  <footer>
     <p>© 2025 Nini's – Horneamos Momentos 💛</p>
-</footer>
-
+  </footer>
 </body>
 </html>
